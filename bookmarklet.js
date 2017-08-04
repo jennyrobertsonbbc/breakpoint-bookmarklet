@@ -1,13 +1,13 @@
 javascript:(function() {
 
-preexisitingLabel = document.getElementById('window-width-label');
+preexisitingLabel = document.getElementById('breakpoint-bookmarklet-window-width-label');
 if (preexisitingLabel) {
     preexisitingLabel.remove();
     return;
 }
 
 var label = document.createElement('div');
-label.setAttribute('id', 'window-width-label');
+label.setAttribute('id', 'breakpoint-bookmarklet-window-width-label');
 label.setAttribute('style', 'background-color: rgba(255, 255, 255, 0.9);padding: 5px;position: fixed;left: 0px;top: 0px; z-index:1000; font-size: 18px; font-family: "Courier", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;');
 document.body.appendChild(label);
 
