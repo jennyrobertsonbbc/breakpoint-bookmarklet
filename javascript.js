@@ -1,7 +1,9 @@
-var labelDiv = "<div id='window-width-label' style='background-color: grey;padding: 10px;position: fixed;right: 0px;top: 0px; z-index:10000000'>XXL</div>";
+var label = document.createElement('div');
+label.setAttribute('id', 'window-width-label');
+label.setAttribute('style', 'background-color: grey;padding: 10px;position: fixed;right: 0px;top: 0px; z-index:10000000');
+label.innerHTML = 'XXL';
 
-document.body.innerHTML += labelDiv;
-var label = document.getElementById('window-width-label');
+document.body.appendChild(label);
 window.onresize = resized;
 resized();
 
@@ -12,7 +14,7 @@ function resized () {
 }
 
 function getBreakpoint(width){
-	if(width < 400) return 'XS';
+if(width < 400) return 'XS';
   else if(width < 600) return 'S';
   else if(width < 900) return 'M';
   else if(width < 1008) return 'L';
